@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <section class="first-page">
+     <div class="char-info flex-row-nowrap">
+       <div class="name">
+         <div class="flex-col-rev-nowrap">
+           <label for="char-name">Imię postaci</label>
+           <input type="text" id="char-name" class="text-input">
+         </div>
+       </div>
+       <div class="char-details flex-row-wrap">
+         <div class="flex-col-rev-nowrap">
+           <label for="class">Klasa i poziom</label>
+           <input type="text" id="class" class="text-input">
+         </div>
+         <div class="flex-col-rev-nowrap">
+           <label for="background">Pochodzenie</label>
+           <input type="text" id="background" class="text-input">
+         </div>
+         <div class="flex-col-rev-nowrap">
+           <label for="player-name">Imię gracza</label>
+           <input type="text" id="player-name" class="text-input">
+         </div>
+         <div class="flex-col-rev-nowrap">
+           <label for="race">Rasa</label>
+           <input type="text" id="race" class="text-input">
+         </div>
+         <div class="flex-col-rev-nowrap">
+           <label for="aligment">Charakter</label>
+           <input type="text" id="aligment" class="text-input">
+         </div>
+         <div class="flex-col-rev-nowrap">
+           <label for="exp">Punkty doś.</label>
+           <input type="number" id="exp" class="text-input">
+         </div>
+       </div>
+     </div>
+     <div class="container main-stats">
+       <div class="first-column">
+         <div class="flex-row-nowrap">
+           <div class="ability-score flex-col">
+             <div class="flex-col-nowrap">
+               <label for="strength">Siła</label>
+               <p class="ability-bonus" id="str-bonus"></p>
+               <input type="number" id="strength" class="ability">
+             </div>
+             <div class="flex-col-nowrap">
+               <label for="dexterity">Zręczność</label>
+               <p class="ability-bonus" id="dex-bonus"></p>
+               <input type="number" id="dexterity" class="ability">
+             </div>
+             <div class="flex-col-nowrap">
+               <label for="constitution">Kondycja</label>
+               <p class="ability-bonus" id="con-bonus"></p>
+               <input type="number" id="constitution" class="ability">
+             </div>
+             <div class="flex-col-nowrap">
+               <label for="inteligence">Inteligencja</label>
+               <p class="ability-bonus" id="int-bonus"></p>
+               <input type="number" id="inteligence" class="ability">
+             </div>
+             <div class="flex-col-nowrap">
+               <label for="wisdom">Mądrość</label>
+               <p class="ability-bonus" id="wis-bonus"></p>
+               <input type="number" id="wisdom" class="ability">
+             </div>
+             <div class="flex-col-nowrap">
+               <label for="charisma">Charyzma</label>
+               <p class="ability-bonus" id="cha-bonus"></p>
+               <input type="number" id="charisma" class="ability">
+             </div>
+           </div>
+           <div class="skill-container">
+             <div class="inspiration-container">
+               <input type="number" id="inspiration" class="text-input">
+               <label for="Inspiration">Inspiracja</label>
+             </div>
+             <div class="proficiency-container">
+               <input type="number" id="proficiency">
+               <label for="proficiency">Premia z Biegłości</label>
+             </div>
+             <div class="saving-throws flex-col">
+               <div>
+                 <input type="checkbox" id="save-str" class="saves">
+                 <input type="number" class="saves-bonus" id="save-str-bonus"><label for="save-str"> Siła</label>
+               </div>
+               <div>
+                 <input type="checkbox" id="save-dex" class="saves">
+                 <input type="number" class="saves-bonus" id="save-dex-bonus">
+                 <label for="save-dex">Zręczność</label>
+               </div>
+               <div>
+                 <input type="checkbox" id="save-con" class="saves">
+                 <input type="number" class="saves-bonus" id="save-con-bonus">
+                 <label for="save-str">Kondycja</label>
+               </div>
+               <div>
+                 <input type="checkbox" id="save-int" class="saves">
+                 <input type="number" class="saves-bonus" id="save-int-bonus">
+                 <label for="save-int">Inteligencja</label>
+               </div>
+               <div>
+                 <input type="checkbox" id="save-wis" class="saves">
+                 <input type="number" class="saves-bonus" id="save-wis-bonus">
+                 <label for="save-wis">Mądrość</label>
+               </div>
+               <div>
+                 <input type="checkbox" id="save-cha" class="saves">
+                 <input type="number" class="saves-bonus" id="save-cha-bonus">
+                 <label for="save-cha">Charyzma</label>
+               </div>
+               <p class="description">Rzuty obronne</p>
+             </div>
+             <div class="skills">
+               <div>
+                 <input type="checkbox"  id="acrobatics" class="skill">
+                 <input type="number" class="skill-bonus" id="acrobatics-bonus">
+                 <label for="acrobatics"> Akrobatyka</label><span class="grey"> (Zrc)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="athletics" class="skill">
+                 <input type="number" id="athletics-bonus" class="skill-bonus">
+                 <label for="athletics"> Atletyka</label><span class="grey"> (Sił)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="history" class="skill">
+                 <input type="number" id="history-bonus" class="skill-bonus">
+                 <label for="history"> Historia</label><span class="grey"> (Int)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="insight" class="skill">
+                 <input type="number" id="insight-bonus" class="skill-bonus">
+                 <label for="insight"> Intuicja</label><span class="grey"> (Mdr)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="medicine" class="skill">
+                 <input type="number" id="medicine-bonus" class="skill-bonus">
+                 <label for="medicine"> Medycyna</label><span class="grey"> (Mdr)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="handling" class="skill">
+                 <input type="number" class="skill-bonus" id="handling-bonus">
+                 <label for="handling"> Opieka nad zwięrzętami</label><span class="grey"> (Mdr)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="deception" class="skill">
+                 <input type="number" id="deception-bonus" class="skill-bonus">
+                 <label for="deception"> Oszustwo</label><span class="grey"> (Cha)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="perception" class="skill">
+                 <input type="number" id="perception-bonus" class="skill-bonus">
+                 <label for="perception"> Percepcja</label><span class="grey"> (Mdr)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="presuasion" class="skill">
+                 <input type="number" id="presuasion-bonus" class="skill-bonus">
+                 <label for="presuasion"> Preswazja</label><span class="grey"> (Cha)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="nature" class="skill">
+                 <input type="number" id="nature-bonus" class="skill-bonus">
+                 <label for="nature"> Przyroda</label><span class="grey"> (Int)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="religion" class="skill">
+                 <input type="number" id="religion-bonus" class="skill-bonus">
+                 <label for="religion"> Religia</label><span class="grey"> (Int)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="stealth" class="skill">
+                 <input type="number" id="stealth-bonus" class="skill-bonus">
+                 <label for="stealth"> Skradanie</label><span class="grey"> (Zrc)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="survival" class="skill">
+                 <input type="number" id="survival-bonus" class="skill-bonus">
+                 <label for="survival"> Sztuka przetrwania</label><span class="grey"> (Mdr)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="invegistation" class="skill">
+                 <input type="number" id="invegistation-bonus" class="skill-bonus">
+                 <label for="invegistation"> Śledztwo</label><span class="grey"> (Int)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="arcana" class="skill">
+                 <input type="number" id="arcana-bonus" class="skill-bonus">
+                 <label for="arcana"> Wiedza tajemna</label><span class="grey"> (Int)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="performance" class="skill">
+                 <input type="number" id="performance-bonus" class="skill-bonus">
+                 <label for="performance"> Występy</label><span class="grey"> (Cha)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="intimidation" class="skill">
+                 <input type="number" id="intimidation-bonus" class="skill-bonus">
+                 <label for="intimidation"> Zastraszanie</label><span class="grey"> (Cha)</span>
+               </div>
+               <div>
+                 <input type="checkbox"  id="sleight" class="skill">
+                 <input type="number" id="sleight-bonus" class="skill-bonus">
+                 <label for="sleight"> Zwinne dłonie</label><span class="grey"> (Zrc)</span>
+               </div>
+               <p class="description">Umiejętności</p>
+             </div>
+           </div>
+         </div>
+         <div class="wis-passive flex-row-nowrap">
+           <input type="text" id="passive-wis"><label for="passive-wis">Pasywna Mądrość (Percepcja)</label>
+         </div>
+         <div class="other-proficiencies flex-col border-square">
+           <textarea id="other-proficiencies" class="text-input"></textarea>
+           <p>Inne biegłości i języki</p>
+         </div>
+       </div>
+       <div class="second-column flex-row-wrap">
+         <div class="flex-col-rev-nowrap border-triangle armor-class">
+           <label for="armor-class">Klasa<br>panc.</label>
+           <input type="text" id="armor-class" class="text-input">
+         </div>
+         <div class="flex-col-rev-nowrap one-third border-square initiative">
+           <label for="initiative">Inicjatywa</label>
+           <input type="text" id="initiative" class="text-input">
+         </div>
+         <div class="flex-col-rev-nowrap one-third border-square speed">
+           <label for="speed">Szybkość</label>
+           <input type="text" id="speed" class="text-input">
+         </div>
+         <div class="hp-max">
+           <div class="hp-maximum">
+             <label class="grey" for="max-hp">Maksymalne PW</label>
+             <input type="text" id="max-hp" class="text-input">
+           </div>
+           <div class="flex-col-rev-nowrap hp-current">
+             <label for="current-hp">Aktualne PW</label>
+             <input type="text" id="current-hp" class="text-input">
+           </div>
+         </div>
+         <div class="flex-col-rev-nowrap" id="hp-temp" >
+           <label for="temp-hp">Tymczasowe PW</label><input type="text" id="temp-hp" class="text-input">
+         </div>
+         <div class="border-square hit-dice">
+           <div class="hp-dice-total flex-row-nowrap">
+             <label for="total-dice" class="grey">Łącznie</label>
+             <input type="text" id="total-dice" class="text-input">
+           </div>
+           <div class="flex-col-rev-nowrap hp-dice">
+             <label for="dice-hp">Kość wytrzymałości</label>
+             <input type="text" id="dice-hp" class="text-input">
+           </div>
+         </div>
+         <div class="death-saves border-square">
+           <div class="successes-container flex-row-wrap">
+             <p>Sukcesy</p>
+             <input type="checkbox" class="death-throw" id="success-1">
+             <input type="checkbox" class="death-throw" id="success-2">
+             <input type="checkbox" class="death-throw" id="success-3">
+           </div>
+           <div class="failures-container flex-row-wrap">
+             <p>Porażki</p>
+             <input type="checkbox" class="death-throw" id="failure-1">
+             <input type="checkbox" class="death-throw" id="failure-2">
+             <input type="checkbox" class="death-throw" id="failure-3">
+           </div>
+           <p>Rzuty przeciw śmierci</p>
+         </div>
+         <div class="weapons-spells flex-col border-square">
+           <div class="weapon-desc flex-row-nowrap">
+             <div class="grey">Nazwa</div>
+             <div class="grey">Premia do atk.</div>
+             <div class="grey">Obrażenia/typ</div>
+           </div>
+           <div id="weapon-1" class="weapon flex-row-nowrap">
+             <input type="text" class="text-input" id="wpn-name-1">
+             <input type="text" class="text-input" id="wpn-attack-1">
+             <input type="text" class="text-input" id="wpn-dmg-1">
+           </div>
+           <div id="weapon-2" class="weapon flex-row-nowrap">
+             <input type="text" class="text-input" id="wpn-name-2">
+             <input type="text" class="text-input" id="wpn-attack-2">
+             <input type="text" class="text-input" id="wpn-dmg-2">
+           </div>
+           <div id="weapon-3" class="weapon flex-row-nowrap">
+             <input type="text" class="text-input" id="wpn-name-3">
+             <input type="text" class="text-input" id="wpn-attack-3">
+             <input type="text" class="text-input" id="wpn-dmg-3">
+           </div>
+           <textarea id="other-weapons" class="text-input"></textarea>
+           <p>Ataki i magia</p>
+         </div>
+         <div class="equipment-money flex-row-wrap border-square">
+           <div class="money flex-col">
+             <div>
+               <label for="cp">SM</label>
+               <input type="text" id="cp" class="text-input">
+             </div>
+             <div>
+               <label for="sp">SS</label>
+               <input type="text" id="sp" class="text-input">
+             </div>
+             <div>
+               <label for="ep">SE</label>
+               <input type="text" id="ep" class="text-input">
+             </div>
+             <div>
+               <label for="gp">SZ</label>
+               <input type="text" id="gp" class="text-input">
+             </div>
+             <div>
+               <label for="pp">SP</label>
+               <input type="text" id="pp" class="text-input">
+             </div>
+           </div>
+           <textarea id="equipment" class="text-input"></textarea>
+           <p>Wyposażenie</p>
+         </div>
+       </div>
+       <div class="third-column flex-col">
+         <div class="character flex-col">
+           <div class="flex-col border-square">
+             <textarea id="traits" class="text-input"></textarea>
+             <p>Cechy osobowości</p>
+           </div>
+           <div class="flex-col border-square">
+             <textarea id="ideals" class="text-input"></textarea>
+             <p>Ideały</p>
+           </div>
+           <div class="flex-col border-square">
+             <textarea id="bonds" class="text-input"></textarea>
+             <p>Więzi</p>
+           </div>
+           <div class="flex-col border-square">
+             <textarea id="flaws" class="text-input"></textarea>
+             <p>Słabości</p>
+           </div>
+         </div>
+         <div class="features flex-col border-square">
+           <textarea id="features" class="text-input"></textarea>
+           <p>Korzyści i zdolności</p>
+         </div>
+       </div>
+     </div>
+    </section>
+    <section class="second-page">
+      <div class="second-page-info flex-row-nowrap">
+        <div class="second-page-name flex-col-rev-nowrap">
+          <label for="name">Imię postaci</label>
+          <input type="text" id="name" class="text-input">
+        </div>
+        <div class="apperance flex-row-wrap">
+          <div class="flex-col-rev-nowrap">
+           <label for="age">Wiek</label>
+           <input type ="number" id="age" class="text-input">
+         </div>
+          <div class="flex-col-rev-nowrap">
+           <label for="height">Wzrost</label>
+           <input type="text" id="height" class="text-input">
+         </div>
+          <div class="flex-col-rev-nowrap">
+           <label for="weight">Waga</label>
+           <input type="text" id="weight" class="text-input">
+         </div>
+          <div class="flex-col-rev-nowrap">
+           <label for="eyes">Oczy</label>
+           <input type="text" id="eyes" class="text-input">
+         </div>
+          <div class="flex-col-rev-nowrap">
+           <label for="skin">Skóra</label>
+           <input type="text" id="skin" class="text-input">
+         </div>
+          <div class="flex-col-rev-nowrap">
+           <label for="hair">Włosy</label>
+           <input type="text" id="hair" class="text-input">
+         </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="fourth-column">
+          <div class="char-apperance flex-col border-square">
+            <textarea id="apperance-char" class="text-input"></textarea>
+            <p>Wygląd postaci</p>
+          </div>
+          <div class="char-backstory flex-col border-square">
+            <textarea id="backstory-char" class="text-input"></textarea>
+            <p>Historia postaci</p>
+          </div>
+        </div>
+        <div class="fifth-column">
+          <div class="allies flex-row-wrap border-square">
+            <textarea id="allies-input" class="input-border"></textarea>
+            <div class="organization">
+              <label for="org-name" class="grey">Nazwa</label>
+              <input type="text" id="org-name" class="input-border text-input">
+              <textarea id="org-desc" class="input-border text-input"></textarea>
+            </div>
+            <p>Sojusznicy i organizacje</p>
+          </div>
+          <div class="additional-features border-square">
+            <textarea id="add-features" class="input-border text-input"></textarea>
+            <p>Pozostałe korzyści i zdolności</p>
+          </div>
+          <div class="treasure border-square">
+            <textarea id="treasure" class="input-border text-input"></textarea>
+            <p>Majątek</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="third-page">
+      <div class="spellcasting flex-row-nowrap">
+        <div class="flex-col-rev-nowrap spell-class border-square">
+          <label for="spellcasting-class">Klasa użytkownika magii</label>
+          <input type="text" id="class-spellcasting" class="input-border text-input">
+        </div>
+        <div class="spellcasting-details flex-row-nowrap border-square">
+          <div class="flex-col-rev-nowrap">
+            <label for="spellcasting-ability">Cecha bazowa</label>
+            <input type="text" id="spellcasting-ability" class="input-border text-input">
+          </div>
+          <div class="flex-col-rev-nowrap">
+            <label for="spell-save">ST rzutu przeciw czarom</label>
+            <input type="text" id="spell-save" class="input-border text-input">
+          </div>
+          <div class="flex-col-rev-nowrap">
+            <label for="spell-attack-bonus">Premia do ataku czarem</label>
+            <input type="text" id="spell-attack-bonus" class="input-border text-input">
+          </div>
+        </div>
+      </div>
+      <div class="container flex-row-nowrap">
+        <div class="sixth-column flex-col-nowrap">
+          <div class="cantrips border-grey">
+            <div class="flex-row-nowrap">
+              <div class="spell-level">
+                <p>0 </p>
+              </div>
+              <div class="cantrips-border">
+                <p> Sztuczki</p>
+              </div>
+            </div>
+          </div>
+          <div class="circle-1 flex-col-nowrap border-grey">
+            <div class="flex-row-nowrap full-width">
+              <div class="spell-level-desc">
+                <p class="grey">Krąg czaru</p>
+              </div>
+              <div class="total-slots-desc">
+                <p class="grey">Komórki czarów</p>
+              </div>
+              <div class="expended-slots-desc">
+                <p class="grey">Wykorzystane komórki</p>
+              </div>
+            </div>
+            <div class="flex-row-nowrap circle-detail">
+              <div class="spell-level">
+                <p>1</p>
+              </div>
+              <div class="total-slots">
+                <input type="number" class="slots-total">
+              </div>
+              <div class="expended-slots">
+                <input type="number" class="slots-expended">
+              </div>
+            </div>
+          </div>
+          <div class="circle-2 flex-col-nowrap border-grey">
+            <div class="flex-row-nowrap circle-detail">
+              <div class="spell-level">
+                <p>2</p>
+              </div>
+              <div class="total-slots">
+                <input type="number" class="slots-total">
+              </div>
+              <div class="expended-slots">
+                <input type="number" class="slots-expended">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="seventh-column flex-col-nowrap">
+          <div class="circle-3 flex-col-nowrap border-grey">
+            <div class="flex-row-nowrap circle-detail">
+              <div class="spell-level">
+                <p>3</p>
+              </div>
+              <div class="total-slots">
+                <input type="number" class="slots-total">
+              </div>
+              <div class="expended-slots">
+                <input type="number" class="slots-expended">
+              </div>
+            </div>
+          </div>
+          <div class="circle-4 flex-col-nowrap border-grey">
+            <div class="flex-row-nowrap circle-detail">
+              <div class="spell-level">
+                <p>4</p>
+              </div>
+              <div class="total-slots">
+                <input type="number" class="slots-total">
+              </div>
+              <div class="expended-slots">
+                <input type="number" class="slots-expended">
+              </div>
+            </div>
+          </div>
+          <div class="circle-5 flex-col-nowrap border-grey">
+            <div class="flex-row-nowrap circle-detail">
+              <div class="spell-level">
+                <p>5</p>
+              </div>
+              <div class="total-slots">
+                <input type="number" class="slots-total">
+              </div>
+              <div class="expended-slots">
+                <input type="number" class="slots-expended">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="eigth-column flex-col-nowrap">
+          <div class="circle-6 flex-col-nowrap border-grey">
+            <div class="flex-row-nowrap circle-detail">
+              <div class="spell-level">
+                <p>6</p>
+              </div>
+              <div class="total-slots">
+                <input type="number" class="slots-total">
+              </div>
+              <div class="expended-slots">
+                <input type="number" class="slots-expended">
+              </div>
+            </div>
+          </div>
+          <div class="circle-7 flex-col-nowrap border-grey">
+            <div class="flex-row-nowrap circle-detail">
+              <div class="spell-level">
+                <p>7</p>
+              </div>
+              <div class="total-slots">
+                <input type="number" class="slots-total">
+              </div>
+              <div class="expended-slots">
+                <input type="number" class="slots-expended">
+              </div>
+            </div>
+          </div>
+          <div class="circle-8 flex-col-nowrap border-grey">
+            <div class="flex-row-nowrap circle-detail">
+              <div class="spell-level">
+                <p>8</p>
+              </div>
+              <div class="total-slots">
+                <input type="number" class="slots-total">
+              </div>
+              <div class="expended-slots">
+                <input type="number" class="slots-expended">
+              </div>
+            </div>
+          </div>
+          <div class="circle-9 flex-col-nowrap border-grey">
+            <div class="flex-row-nowrap circle-detail">
+              <div class="spell-level">
+                <p>9</p>
+              </div>
+              <div class="total-slots">
+                <input type="number" class="slots-total">
+              </div>
+              <div class="expended-slots">
+                <input type="number" class="slots-expended">
+              </div>
+            </div></div>
+        </div>
+      </div>
+    </section>
+   </main>
+  <script src="script.js"></script>
+</body>
+</html>
